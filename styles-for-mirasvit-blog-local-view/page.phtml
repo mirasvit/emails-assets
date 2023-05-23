@@ -1,0 +1,322 @@
+<?php
+$meta = $this->getMeta();
+?>
+<!doctype html>
+<html lang="en">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# product: http://ogp.me/ns/product#">
+    <meta charset="utf-8"/>
+    <meta name="title" content="<?= $meta['meta_title'] ?>"/>
+    <meta name="description" content="<?= $meta['meta_description'] ?>"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title><?= $meta['meta_title'] ?></title>
+    <link rel="stylesheet" type="text/css" media="all" href="https://web.archive.org/web/20221115173124cs_/https://mirasvit.com/static/version1668500209/_cache/merged/552eac34a4fb8784b1ecfacc6bb84d9d.min.css"/>
+    <link rel="stylesheet" type="text/css" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"/>
+</head>
+
+
+<body class="<?= $this->getBodyCSSClass() ?>">
+
+
+<div class="page-wrapper">
+    <header class="page-header"><span class="scroll-up" data-element-scroll-up><i class="icon icon-arrow-up"></i></span>
+        <span data-action="toggle-nav" class="action nav-toggle"><span class="icon icon-burger"></span></span>
+
+        <div class="container">
+            <section class="secondary">
+
+                <a class="logo" href="https://mirasvit.com/" title="Mirasvit Magento Extensions">
+                    <img src="https://mirasvit.com/static/version1592385169/frontend/Mirasvit/sense/en_US/images/logo.svg" alt="Mirasvit Magento Extensions" height="37px"/>
+                </a>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <nav class="secondary">
+                        <a href="https://mirasvit.com/about-us.html">
+                            About Us
+                        </a>
+
+                        <a href="https://mirasvit.com/blog.html">
+                            Blog
+                        </a>
+
+                        <a href="https://mirasvit.com/partnership.html">
+                            Partnership
+                        </a>
+
+                        <a href="https://mirasvit.com/support.html">
+                            Support
+                        </a>
+
+                        <a href="https://mirasvit.com/contact.html">
+                            Contact Us
+                        </a>
+                    </nav>
+
+                    <nav class="nav shortcut">
+                        <div>
+                            <div class="account-navigation">
+                                <div class="switcher">
+                                    <div class="dropdown">
+                                        <div class="switcher-trigger"
+                                             data-mage-init='{"dropdown":{}}'
+                                             data-toggle="dropdown"
+                                             data-trigger-keypress-button="true">
+                                            <span class="text">My Account</span><span class="icon icon-account"></span>
+                                        </div>
+
+                                        <ul class="switcher-dropdown" data-target="dropdown">
+                                            <li><a href="https://mirasvit.com/customer/account/">My Account</a></li>
+                                            <li class="authorization-link" data-label="or">
+                                                <a href="https://mirasvit.com/customer/account/logout/" data-post='{"action":"http:\/\/mst.alx.mirasvit.com\/customer\/account\/logout\/","data":{"uenc":"aHR0cDovL21zdC5hbHgubWlyYXN2aXQuY29tL21hZ2VudG8tMi1hZG1pbi1ib29rbWFya3MuaHRtbA,,"}}'>
+                                                    Sign Out </a>
+                                            </li>
+                                            <li class="link rewards" data-bind="scope: 'rewards'">
+                                                <a href="https://mirasvit.com/rewards/account/">Reward Points        <!-- ko if: rewards().amount -->
+                                                    <span data-bind="text: rewards().amount" class="counter amount"></span>
+                                                    <!-- /ko -->
+                                                </a>
+                                            </li>
+                                            <li class="link helpdesk wishlist" data-bind="scope: 'helpdesk'">
+                                                <a href="https://mirasvit.com/helpdesk/ticket/">My Support Tickets            <!-- ko if: helpdesk().amount -->
+                                                    <span data-bind="text: helpdesk().amount" class="counter amount"></span>
+                                                    <!-- /ko -->
+                                                </a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div data-block="minicart" class="minicart-wrapper">
+                                <a class="action showcart" href="https://mirasvit.com/checkout/cart/"
+                                   data-bind="scope: 'minicart_content'">
+                                    <span class="text">My Cart</span><span class="icon icon-cart"></span>
+                                    <span class="counter qty empty"
+                                          data-bind="css: { empty: !!getCartParam('summary_count') == false }, blockLoader: isLoading">
+            <span class="counter-number"><!-- ko text: getCartParam('summary_count') --><!-- /ko --></span>
+            <span class="counter-label">
+            <!-- ko if: getCartParam('summary_count') -->
+                <!-- ko text: getCartParam('summary_count') --><!-- /ko -->
+                <!-- ko i18n: 'items' --><!-- /ko -->
+                <!-- /ko -->
+            </span>
+        </span>
+                                </a>
+
+                                <div class="block block-minicart empty"
+                                     data-role="dropdownDialog"
+                                     data-mage-init='{"dropdownDialog":{
+                "appendTo":"[data-block=minicart]",
+                "triggerTarget":".showcart",
+                "timeout": "2000",
+                "closeOnMouseLeave": false,
+                "closeOnEscape": true,
+                "triggerClass":"active",
+                "parentClass":"active",
+                "buttons":[]}}'>
+                                    <div id="minicart-content-wrapper" data-bind="scope: 'minicart_content'">
+                                        <!-- ko template: getTemplate() --><!-- /ko -->
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="primary">
+                <div class="sections nav-sections">
+                    <nav class="primary">
+                        <a href="https://mirasvit.com/magento-2-extensions.html">
+                            Magento 2 Extensions
+                        </a>
+
+                        <a href="https://mirasvit.com/magento-extensions.html">
+                            Magento 1 Extensions
+                        </a>
+                    </nav>
+
+                    <nav class="secondary">
+                        <a href="https://mirasvit.com/about-us.html">
+                            About Us
+                        </a>
+
+                        <a href="https://mirasvit.com/blog.html">
+                            Blog
+                        </a>
+
+                        <a href="https://mirasvit.com/partnership.html">
+                            Partnership
+                        </a>
+
+                        <a href="https://mirasvit.com/support.html">
+                            Support
+                        </a>
+
+                        <a href="https://mirasvit.com/contact.html">
+                            Contact Us
+                        </a>
+                    </nav>
+                </div>
+
+                <div class="block-search">
+                    <form class="form minisearch" id="search_mini_form" action="https://mirasvit.com/catalogsearch/result/" method="get">
+                        <div class="control">
+                            <input id="search"
+                                   data-mage-init='{"quickSearch":{
+                                "formSelector":"#search_mini_form",
+                                "url":"https://mirasvit.com/search/ajax/suggest/",
+                                "destinationSelector":"#search_autocomplete",
+                                "minSearchLength":"3"}
+                           }'
+                                   type="text"
+                                   name="q"
+                                   value=""
+                                   placeholder="Search&#x20;entire&#x20;store&#x20;here..."
+                                   class="input-text"
+                                   maxlength="128"
+                                   role="combobox"
+                                   aria-haspopup="false"
+                                   aria-autocomplete="both"
+                                   autocomplete="off"
+                                   aria-expanded="false"/>
+
+                            <button type="submit"><span class="icon icon-search"></span></button>
+                        </div>
+
+                        <label for="search" class="search"><span class="icon icon-search"></span></label>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+    </header>
+    <div
+            data-banner-placeholder="2"
+            data-loaded="1"
+            class="mst-banner__placeholder  mst-banner__placeholder-stretching">
+        <div class="mstBanner-placeholder__rotatorRenderer">
+        </div>
+    </div>
+
+    <?= $this->mainHtml() ?>
+
+    <footer class="page-footer">
+        <div class="container pt-24 pt-md-72">
+            <div class="row">
+                <div class="col-lg-3 col-md-4 col-12 mb-24 mb-md-48">
+                    <strong>Contacts</strong>
+
+                    <address>
+                        <strong>Headquarter</strong>
+                        San Francisco, USA
+                    </address>
+
+                    <address>
+                        <strong>Development & support office</strong>
+                        Kyiv, Ukraine
+                        <a class="email" href="mailto: sales@mirasvit.com">sales@mirasvit.com</a>
+                    </address>
+
+
+                    <div class="social">
+                        <a href="https://www.facebook.com/MirasvitMagento"><span class="icon icon-fb"></span></a>
+                        <a href="https://twitter.com/mirasvit"><span class="icon icon-tw"></span></a>
+                    </div>
+                </div>
+
+
+                <div class="col-lg-2 col-md-4 col-12 mb-24 mb-md-48">
+                    <nav>
+                        <strong>Company</strong>
+                        <div class="items">
+                            <a href="https://mirasvit.com/about-us.html">About Mirasvit</a>
+                            <a href="https://mirasvit.com/partners.html">Our partners</a>
+                            <a href="https://mirasvit.com/contact.html">Contact us</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-12 mb-24 mb-md-48">
+                    <nav>
+                        <strong>Resources</strong>
+                        <div class="items">
+                            <a href="https://mirasvit.com/support.html">Support</a>
+                            <a href="https://mirasvit.com/blog.html">Blog</a>
+                            <a href="https://mirasvit.com/partnership.html">Partnership program</a>
+                            <a href="https://mirasvit.com/rewards-policy.html">Discount program</a>
+                            <a href="https://mirasvit.com/affiliate-program.html">Affiliate program</a>
+                            <a href="https://mirasvit.com/knowledge-base.html">Knowledge Base</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-2 col-md-4 col-12 mb-24 mb-md-48">
+                    <nav>
+                        <strong>Legal</strong>
+                        <div class="items">
+                            <a href="https://mirasvit.com/license-agreement.html">License Agreement</a>
+                            <a href="https://mirasvit.com/license-agreement.html#refund">Refund Policy</a>
+                            <a href="https://mirasvit.com/privacy-policy.html">Privacy Policy</a>
+                        </div>
+                    </nav>
+                </div>
+
+                <div class="col-lg-3 col-md-4 mb-48 d-none d-md-block newsletter">
+                    <strong class="text-yellow">Only good news</strong>
+                    <p>New updates and great discounts for our customers</p>
+                    <a class="btn btn-primary" href="https://mirasvit.us6.list-manage.com/subscribe/post?u=3acc56b2f69052d4ce79d9752&id=f23319ac4f" target="_blank">
+                        Subscribe
+                        <svg width="113" height="102" viewBox="0 0 113 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 40.8863C6.26166 38.6078 14.53 37.8483 23.9258 47.3421C40.0866 63.2917 23.9258 99.7478 51.3616 98.9883C70.9049 98.6086 72.7841 58.3549 61.5091 58.3549C49.8583 58.3549 56.9991 78.4817 69.0258 78.4817C105.857 78.8615 91.0648 46.3333 91.0648 46.3333C91.0648 46.3333 87.4416 27.2153 91.9516 20" stroke="#E2E2E2" stroke-width="0.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="1 2"/>
+                            <path d="M97.3999 11.6C98.0999 11 112.1 0 112.1 0L106 17.5L97.3999 11.6Z" fill="white"/>
+                            <path d="M84 8.1C84 8.1 91.4 9.9 91.5 9.8C91.7 9.7 112.1 0 112.1 0L84 8.1Z" fill="white"/>
+                            <path d="M91.6001 9.8L93.4001 17.8L97.4001 11.6L112.1 0L91.6001 9.8Z" fill="#C8C5C4"/>
+                            <path d="M93.3999 17.8001L98.7999 12.6001L97.3999 11.6001L93.3999 17.8001Z" fill="#9B9B9B"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-center pt-12 pt-md-48 pb-24">
+                <div class="align-items-center d-none d-md-flex">
+                    <svg width="40" height="25" viewBox="0 0 40 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M24.2734 8.88605V21.301L39.9985 25V0L24.2734 8.88605ZM29.9448 14.6259L38.0222 23.1718L25.8202 20.2806L29.9448 14.6259ZM30.3315 14.0731L38.6666 2.59354V22.8741L30.3315 14.0731ZM37.5496 2.97619L25.6483 19.3452V9.69388L37.5496 2.97619Z" fill="white"/>
+                        <path d="M5.1218e-09 24.9154L22.5565 21.3015V10.8423L5.1218e-09 0.0429688V24.9154ZM15.6392 14.5838L2.87864 2.93413L20.7949 11.5226L15.6392 14.5838ZM15.0377 14.9239L1.33191 23.0872V2.46644L15.0377 14.9239ZM2.62085 23.1297L21.1816 12.0753V20.1535L2.62085 23.1297Z" fill="white"/>
+                    </svg>
+
+                    <a href="https://sense.pro/" rel="nofollow" target="_blank" class="sense ml-12">Designed by<br> Sense Production</a>
+                </div>
+
+                <div class="flex-grow-1 justify-content-center d-none d-md-flex">
+                    <span class="icon icon-visa mx-6"></span>
+                    <span class="icon icon-paypal mx-6"></span>
+                    <span class="icon icon-mastercard mx-6"></span>
+                </div>
+
+                <small class="copyright">
+                    <span>© 2020 Mirasvit. All Rights Reserved.</span>
+                </small>
+            </div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
+<script>
+    var BASE_URL = 'https://mirasvit.com/';
+    var require = {
+        "baseUrl": "https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US"
+    };</script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/requirejs/require.min.js"></script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/requirejs-min-resolver.min.js"></script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/js/bundle/bundle_default.min.js"></script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/mage/requirejs/static.min.js"></script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/mage/requirejs/mixins.min.js"></script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/requirejs-config.min.js"></script>
+<script type="text/javascript" src="https://mirasvit.com/static/version1600331081/frontend/Mirasvit/sense/en_US/mage/polyfill.min.js"></script>
